@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dziennik</title>
+    <script src="dzejes.js" defer></script>
+  </head>
+  <body>
+    <form action="#">
+      <h1>Dziennik praktyki zawodowej</h1>
+      <label for="czesci">
+          <ul>
+            <li><button type="button" id="menub">Metryczka</button></li>
+            <li><button type="button" id="dzienniki">Dziennik zajęć</button></li>
+            <li><button type="button" id="pod">Podsumowanie</button></li>
+          </ul>
+      </label>
+
+      <div id="menu">
+        <div id="gato1"><center><h3>Wprowadź dane ucznia i praktyki</h3></center></div>
+       <br><div id="gato2">
+<label for="imie">
+          Imię:
+          <input type="text" name="imie" id="imie" />
+        </label>
+        <label for="nazwisko">
+          Nazwisko:
+          <input type="text" name="nazwisko" id="nazwisko" />
+        </label>
+        <label for="klasa"></div>
+        <br> <div id="gato3">  Klasa:
+          <input type="text" name="klasa" id="klasa" />
+        </label>
+        <label for="data">
+          Rok szkolny:
+          <input type="text" name="data" id="data" />
+        </label> </div>
+       <br><div id="gato4">  <label for="czas">
+          Odbytej w:
+          <input type="text" name="czas" id="czas" />
+        </label> </div>
+        <fieldset>
+          <legend>Czas trwania praktyk</legend>
+          <label for="trw">
+            Data rozpoczęcia:
+            <input type="date" id="trw" />
+          </label>
+          <label for="knc">
+            Data zakończenia:
+            <input type="date" id="knc" />
+          </label>
+        </fieldset>
+        <button type="submit" id="submit">zatwierdź</button>
+      </div>
+
+      <div class="hidden" id="subData">
+        <label for="sub">
+          <label for="subName"> Imię: </label>
+          <label for="subSurname"> Nazwisko: </label>
+          <label for="subClass"> Klasa: </label>
+          <label for="subDate"> Rok szkolny: </label>
+          <label for="subWhen"> Odbytej w: </label>
+          <label for="subDateStart"> Data rozpoczęcia: </label>
+          <label for="subDateEnd"> Data zakończenia: </label>
+        </label>
+        <button type="button" id="edit">Edytuj</button>
+      </div>
+
+      <div class="hidden" id="logbook">
+        <h2>Realizacja materiału</h2>
+        <fieldset>
+          <legend>Informacja o zajęciach</legend>
+          <label for="date">
+            Wybierz date zajęć
+            <input type="date" />
+          </label>
+          <label for="dial">
+            Wybierz dział
+            <select id="dzial">
+              <option value="">Wybierz dział</option>
+              <option value="Systemy operacyjne">Systemy operacyjne</option>
+              <option value="Naprawa sprzętu komputerowego">
+                Naprawa sprzętu komputerowego
+              </option>
+              <option value="Sieci komputerowe">Sieci komputerowe</option>
+              <option value="Projektowanie stron internetowych">
+                Projektowanie stron internetowych
+              </option>
+              <option value="Programowanie aplikacji internetowych">
+                Programowanie aplikacji internetowych
+              </option>
+            </select>
+            <label for="topics">
+              Tematy
+              <select id="topics">
+                <option value=""></option>
+              </select>
+            </label>
+          </label>
+        </fieldset>
+        <fieldset id="sypervisor">
+          <legend>Opiekun</legend>
+          <input type="radio" name="opiekun" />Paweł Pawlacz
+          <input type="radio" name="opiekun" />Tomasz Andrzej Luźny
+          <input type="radio" name="opiekun" />Remigiusz Maciaszek
+        </fieldset>
+        <fieldset>
+          <legend>Realizacja materiału</legend>
+          <label for="textBox">
+            Sprawozdanie:
+            <textarea
+              name="textBox"
+              id="textBox"
+              cols="30"
+              rows="10"
+            ></textarea></label
+          >Zrealizowano:<input type="checkbox" /> Ile godzin:
+          <input type="number" min="1" max="10" /> Stopień opanowania materiału
+          1 <input type="range" min="1" max="6" /> 6
+        </fieldset>
+        <button type="button">dodaj</button>
+        <button type="button">wyczyść</button>
+      </div>
+    </form>
+    <div class="hidden" id="summary">
+      <div class="note">
+      </div>
+      <div class="note">
+        <ol>
+          <li>Systemy operacyjne, z 20h</li>
+          <li>Naprawa sprzętu komputerowego, z 20h</li>
+          <li>Sieci komputerowe, z 20h</li>
+          <li>Projektowanie stron internetowych, z 20h</li>
+          <li>Programowanie aplikacji internetowych, z 20h</li>
+        </ol>
+      </div>
+      <div class="grade">ocena końcowa</div>
+    </div>
+  </body>
+</html>
